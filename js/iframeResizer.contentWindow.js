@@ -44,7 +44,7 @@
 		resizeFrom            = 'child',
 		sendPermit            = true,
 		target                = window.parent,
-		targetOriginDefault   = '*',
+		targetOriginDefault   = document.referrer || '*',
 		tolerance             = 0,
 		triggerLocked         = false,
 		triggerLockedTimer    = null,
