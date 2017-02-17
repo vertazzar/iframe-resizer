@@ -827,6 +827,11 @@
 
 			checkOptions(options);
 			copyOptions(options);
+			
+			if (options.targetOrigin) {
+				settings[iframeId].targetOrigin = options.targetOrigin;
+				return;
+			}
 
 			settings[iframeId].targetOrigin = true === settings[iframeId].checkOrigin ? getTargetOrigin(settings[iframeId].remoteHost) : '*';
 		}
